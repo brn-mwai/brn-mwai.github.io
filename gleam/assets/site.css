@@ -223,3 +223,17 @@ footer { padding: 44px 0 56px; border-top: 1px solid var(--line); color: var(--f
 .license-text { white-space: pre-wrap; word-break: break-word; color: var(--text); font-size: 13px; }
 
 b, strong, th, summary, dt { font-weight: 500; }
+
+.has-gleam-cursor, .has-gleam-cursor * { cursor: none !important; }
+.gleam-cursor { position: fixed; left: 0; top: 0; z-index: 1000; pointer-events: none; opacity: 0; transition: opacity 140ms; will-change: transform; }
+.gleam-cursor.is-on { opacity: 1; }
+.gleam-cursor svg { display: block; width: 46px; height: auto; overflow: visible; transform: translate(-98.1%, -46.2%); transform-origin: 98.1% 46.2%; rotate: var(--tilt, 0deg); scale: 1; transition: rotate 220ms cubic-bezier(0.2, 0, 0, 1), scale 160ms cubic-bezier(0.2, 0, 0, 1); }
+.gleam-cursor .gc-body { transition: translate 180ms cubic-bezier(0.2, 0, 0, 1); }
+.gleam-cursor .gc-eyes { translate: var(--look, 0px) 0; transition: translate 200ms cubic-bezier(0.2, 0, 0, 1); }
+.gleam-cursor .gc-eye { transform-box: fill-box; transform-origin: 50% 50%; transition: scale 70ms ease-out; }
+.gleam-cursor.is-blinking .gc-eye { scale: 1 0.1; }
+.gleam-cursor.is-pointing .gc-eyes { translate: 14px -10px; }
+.gleam-cursor.is-pointing svg { scale: 1.14; }
+.gleam-cursor.is-pointing .gc-body { translate: -34px 26px; }
+.gleam-cursor.is-pressed svg { scale: 0.9; }
+@media (prefers-reduced-motion: reduce) { .gleam-cursor svg, .gleam-cursor .gc-body, .gleam-cursor .gc-eyes { transition: none; } }
