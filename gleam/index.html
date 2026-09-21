@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gleam: a buddy that shows you how, on your own screen</title>
+  <meta name="description" content="Gleam lives on your Windows desktop. Ask how to do something and it points, draws and clicks while it explains. Build a room of AI experts, each with its own brain and voice. Champion of the Nairobi Fable 5.1 Build Day.">
+  <meta name="theme-color" content="#0f1115">
+  <link rel="canonical" href="https://brn-mwai.github.io/gleam/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Gleam">
+  <meta property="og:title" content="Gleam: a buddy that shows you how, on your own screen">
+  <meta property="og:description" content="A screen buddy and a room of AI experts you build yourself. Champion, Nairobi Fable 5.1 Build Day.">
+  <meta property="og:url" content="https://brn-mwai.github.io/gleam/">
+  <meta property="og:image" content="https://brn-mwai.github.io/gleam/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Gleam: a buddy that shows you how, on your own screen">
+  <meta name="twitter:description" content="A screen buddy and a room of AI experts you build yourself. Champion, Nairobi Fable 5.1 Build Day.">
+  <meta name="twitter:image" content="https://brn-mwai.github.io/gleam/assets/og.png">
+  <link rel="stylesheet" href="assets/site.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Gleam",
+    "operatingSystem": "Windows 10, Windows 11",
+    "applicationCategory": "ProductivityApplication",
+    "softwareVersion": "0.1.0",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "author": { "@type": "Person", "name": "Brian Mwai" },
+    "url": "https://brn-mwai.github.io/gleam/",
+    "downloadUrl": "https://github.com/brn-mwai/brn-mwai.github.io/releases/download/v0.1.0/Gleam_0.1.0_x64-setup.exe",
+    "award": "Champion, Nairobi Fable 5.1 Build Day 2026 (Claude Community Kenya)"
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="top" id="top">
+    <div class="wrap top-in">
+      <a class="brand" href="./" aria-label="Gleam home"><img src="assets/logo.svg" alt="Gleam" width="90" height="28"></a>
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="#features">Features</a>
+        <a href="#how">How it works</a>
+        <a href="#award">Award</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="btn btn-primary btn-sm" href="#download">Download</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="nav">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <a class="award-pill" href="#award">
+            <i><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path d="M7 4h10v3a5 5 0 0 1-10 0V4zm-3 1h3v2a2 2 0 0 1-3 0V5zm13 0h3v2a2 2 0 0 1-3 0V5zM10 13h4l1 4H9l1-4zm-2 5h8v2H8v-2z" fill="currentColor"/></svg></i>
+            Champion · Nairobi Fable 5.1 Build Day
+          </a>
+          <h1>A buddy that shows you how, <em>on your own screen.</em></h1>
+          <p class="lead">Gleam lives on your Windows desktop. Ask how to do something and it points, draws and clicks while it explains. Then build a room of AI experts, each with its own brain, voice and memory, and hear them talk your idea through out loud.</p>
+          <div class="cta">
+            <a class="btn btn-primary" href="https://github.com/brn-mwai/brn-mwai.github.io/releases/download/v0.1.0/Gleam_0.1.0_x64-setup.exe" data-download>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5.5l7.5-1v7H3v-6zm0 13l7.5 1v-7H3v6zm8.5 1.1L21 21v-8.5h-9.5v7.1zm0-15.2v7.1H21V3l-9.5 1.4z" fill="currentColor"/></svg>
+              Download for Windows
+            </a>
+            <a class="btn" href="#demo">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5-11-6.5z" fill="currentColor"/></svg>
+              Watch the demo
+            </a>
+          </div>
+          <p class="fineprint">Free · Windows 10 and 11 · 2.6 MB · Bring your own Claude, Groq, OpenAI, NVIDIA or Fish Audio keys.</p>
+        </div>
+        <div class="hero-shot reveal">
+          <div class="window">
+            <div class="window-bar"><i></i><i></i><i></i><span>Gleam · Product team</span></div>
+            <img src="assets/shots/room-call.webp" alt="Gleam's call view with five experts: Gleam, Maya the product strategist, Dev the engineer, Ines the designer and Sam the sceptic." width="1475" height="975">
+          </div>
+          <img class="hero-mascot" src="assets/mascot.svg" alt="" width="118" height="155">
+        </div>
+      </div>
+    </section>
+
+    <section class="award" id="award" aria-labelledby="award-title">
+      <div class="wrap">
+        <div class="award-card reveal">
+          <div class="award-gold">
+            <svg class="trophy" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 4h10v3a5 5 0 0 1-10 0V4zm-3 1h3v2a2 2 0 0 1-3 0V5zm13 0h3v2a2 2 0 0 1-3 0V5zM10 13h4l1 4H9l1-4zm-2 5h8v2H8v-2z" fill="currentColor"/></svg>
+            <b>Gleam</b>
+            <strong>CHAMPION</strong>
+            <span>and Delight track winner</span>
+            <span>Nairobi · Fable 5.1 Build Day · 19 to 20 September 2026</span>
+          </div>
+          <div class="award-body">
+            <h3 id="award-title">First of 19 teams, first in Delight</h3>
+            <p class="award-meta">Judged by the Claude Community Kenya panel on four criteria.</p>
+            <ul class="scores">
+              <li><span>New Capability <b>8.8</b></span><div class="bar"><i style="width:88%"></i></div></li>
+              <li><span>It Works <b>9.0</b></span><div class="bar"><i style="width:90%"></i></div></li>
+              <li><span>Keep or Share <b>9.3</b></span><div class="bar"><i style="width:93%"></i></div></li>
+              <li><span>Clarity of Demo <b>9.3</b></span><div class="bar"><i style="width:93%"></i></div></li>
+            </ul>
+            <blockquote class="quote">
+              "Gleam is not a chatbot with a costume on. You built a general agent builder where different experts run on different brains at once, Claude and Llama sitting at the same table and actually disagreeing, and that architectural choice is the hard part most teams skip."
+              <cite>Claude Community Kenya, community review</cite>
+            </blockquote>
+            <div class="award-links">
+              <a class="btn btn-sm" href="https://www.claudekenya.org/impact-lab/results/hdBWjbf15taAvW16E5MC1Hpw" rel="noopener" target="_blank">See the result card</a>
+              <a class="btn btn-sm" href="https://www.claudekenya.org" rel="noopener" target="_blank">claudekenya.org</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="demo" aria-labelledby="demo-title">
+      <div class="wrap center">
+        <p class="kicker">See it work</p>
+        <h2 id="demo-title">Gleam in ninety seconds</h2>
+        <p class="section-lead">A real walk through the app: asking Gleam for help on screen, a room of experts talking an idea through, and the pointers that work together on the same page.</p>
+        <div class="video-frame reveal">
+          <video controls preload="metadata" playsinline poster="assets/demo-poster.jpg">
+            <source src="assets/gleam-demo.mp4" type="video/mp4">
+            Your browser cannot play this video. <a href="assets/gleam-demo.mp4">Download the demo</a>.
+          </video>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" aria-labelledby="features-title">
+      <div class="wrap">
+        <p class="kicker">What it does</p>
+        <h2 id="features-title">Help that comes out of the box</h2>
+        <p class="section-lead">Every other assistant answers in a chat box and leaves you to find the button. Gleam comes onto your screen and points at it.</p>
+        <div class="grid-3">
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 3l14 7-6 2-2 6-6-15z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
+            <h3>Shows you, on your screen</h3>
+            <p>Ask how to do something in any app. Gleam looks at your screen, zooms in on the exact control, circles it in pencil, explains it, and clicks for you when you ask.</p>
+          </article>
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="16" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M2 20c0-3.3 2.7-6 6-6s6 2.7 6 6M12 20c0-3.3 1.8-6 4-6s6 2.7 6 6" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+            <h3>A room of experts you build</h3>
+            <p>Lawyers, engineers, designers or your own team: any expert you like, with a name, craft, personality, face, voice and skills. They talk your idea through and answer each other by name.</p>
+          </article>
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3a3 3 0 0 0-3 3v1a3 3 0 0 0-2 5 3 3 0 0 0 2 5v1a3 3 0 0 0 6 0V3.5M15 3a3 3 0 0 1 3 3v1a3 3 0 0 1 2 5 3 3 0 0 1-2 5v1a3 3 0 0 1-6 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <h3>A different brain for each</h3>
+            <p>Claude Fable 5.1, Opus, Sonnet or Haiku, GPT-5, Llama or GPT-OSS on Groq. Put a Claude and a Llama at the same table and hear them genuinely disagree.</p>
+          </article>
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4l7 3.5L3 11V4zm11 9l7 3.5-7 3.5v-7zM3 14l5 2.5L3 19v-5z" fill="currentColor"/></svg></div>
+            <h3>Pointers that work together</h3>
+            <p>Say "all of you, go to this site and explain it". Every expert's pointer comes onto your desktop, one opens the page and the others point, draw and explain their part in turn.</p>
+          </article>
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3" fill="none" stroke="currentColor" stroke-width="2"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <h3>Just talk</h3>
+            <p>Hold Right Ctrl and speak. Your words appear live as you talk, and whoever you asked answers "On it" in their own voice before the full reply is even ready.</p>
+          </article>
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v12H8l-4 4V4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M8 9h8M8 12h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <h3>A shared canvas</h3>
+            <p>Experts write their best points in handwriting and sketch wireframes in pencil while they talk. Pin your own notes, ask the room about any of them, and copy the board out as text.</p>
+          </article>
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="18" cy="7" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="18" r="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8 7l7.5.5M7.5 8l3.5 8M16.5 9l-3.5 7" stroke="currentColor" stroke-width="2"/></svg></div>
+            <h3>Memory and a knowledge graph</h3>
+            <p>Each expert remembers what you tell them about yourself and builds a graph of facts about your work, from your chats and from notes you give them.</p>
+          </article>
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.4 8.3-8 9-4.6-.7-8-4.5-8-9V6l8-3z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M8.5 12l2.5 2.5 4.5-5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <h3>Waits for your OK</h3>
+            <p>Anything that sends, posts, deletes, buys or installs is held until you press Allow. Every action Gleam takes is written to a log on your computer.</p>
+          </article>
+          <article class="card reveal">
+            <div class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 7v5l3 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
+            <h3>Routines and teach by showing</h3>
+            <p>Have a room check in every weekday at nine. Or do a task once while Gleam watches, and it writes a skill your expert can follow next time. What you type is never recorded.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="inside-title">
+      <div class="wrap">
+        <p class="kicker">Inside Gleam</p>
+        <h2 id="inside-title">Built for real work, not a demo</h2>
+        <p class="section-lead">The cartoon boardroom won the room over on build day. Gleam's real job is your own team of experts, on your own problems.</p>
+
+        <div class="show">
+          <div class="show-text reveal">
+            <h3>A meeting that actually meets</h3>
+            <p>Pitch an idea and the room takes turns. Experts build on each other, push back by name, raise a hand when they need something from you, and Gleam chairs: it frames the question, keeps order and says back who owns what.</p>
+            <ul class="ticks">
+              <li>Say "all of you" and everyone answers once, in order</li>
+              <li>Name one expert and only they reply</li>
+              <li>Run the meeting from framing to decision, then print the minutes</li>
+            </ul>
+          </div>
+          <div class="window reveal"><img src="assets/shots/room-chat.webp" alt="A Gleam group chat where Maya, Dev, Ines and Sam each answer in character and react to each other." width="1475" height="975" loading="lazy"></div>
+        </div>
+
+        <div class="show flip">
+          <div class="show-text reveal">
+            <h3>Everyone on your screen at once</h3>
+            <p>Call your experts and their pointers stand on your desktop together, each in their own colour. The one speaking steps forward. When one takes the screen, the rest wait their turn, because Windows has one mouse.</p>
+            <ul class="ticks">
+              <li>Works across any app: browsers, Figma, spreadsheets, email</li>
+              <li>Zooms in for a sharp look before it points or clicks</li>
+              <li>Pointers go home on their own when the room goes quiet</li>
+            </ul>
+            <figure class="pointers">
+              <img src="assets/shots/pointers.png" alt="Five Gleam pointers standing side by side on a desktop: Gleam, Maya, Dev, Ines and Sam, each with a coloured name tag." width="1633" height="113" loading="lazy">
+              <figcaption>The Product team, standing on the desktop</figcaption>
+            </figure>
+          </div>
+          <div class="window reveal"><img src="assets/shots/canvas.webp" alt="Gleam's canvas: experts as live cursors above a handwritten note by Ines." width="1475" height="975" loading="lazy"></div>
+        </div>
+
+        <div class="show">
+          <div class="show-text reveal">
+            <h3>Every expert, their own mind</h3>
+            <p>Pick the provider and the model for each expert. Give them skills as SKILL.md files, teach them facts from your notes, and they keep what they learn about you between conversations.</p>
+            <ul class="ticks">
+              <li>Claude on your subscription through Claude Code, or on your API key</li>
+              <li>Groq for the fastest replies and live captions</li>
+              <li>Memory you can read, edit and clear at any time</li>
+            </ul>
+          </div>
+          <div class="window reveal"><img src="assets/shots/expert-brain.webp" alt="The expert editor showing the brain and model picker, memory and knowledge graph sections." width="1475" height="975" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="how" aria-labelledby="how-title">
+      <div class="wrap">
+        <p class="kicker">How it works</p>
+        <h2 id="how-title">Three minutes from download to your first room</h2>
+        <p class="section-lead">No account, no sign-up, no server of ours. Gleam runs on your computer with your own keys.</p>
+        <div class="steps">
+          <div class="step reveal">
+            <h3>Install</h3>
+            <p>Download the installer and run it. It installs for your Windows user only, with no admin rights needed.</p>
+          </div>
+          <div class="step reveal">
+            <h3>Follow the welcome</h3>
+            <p>Tell Gleam your name, connect a brain (your Claude subscription or a key) and, if you like, a voice. Every key is tested before it is kept. Then pick a first team of experts.</p>
+          </div>
+          <div class="step reveal">
+            <h3>Talk to it</h3>
+            <p>Hold <kbd>Right Ctrl</kbd> and ask. <kbd>Ctrl</kbd> + <kbd>Shift</kbd> wakes Gleam beside your cursor, <kbd>Shift</kbd> + drag circles anything to ask about it, and <kbd>Alt</kbd> + <kbd>G</kbd> shows every shortcut.</p>
+          </div>
+        </div>
+        <div class="show" style="margin-top:56px">
+          <div class="show-text reveal">
+            <h3>A welcome that sets everything up</h3>
+            <p>New users are walked through six short steps. Gleam finds the Claude Code CLI by itself, tests each key against its service, checks your microphone, and creates a first room of original experts on the best brain you connected.</p>
+          </div>
+          <div class="window reveal"><img src="assets/shots/welcome-room.webp" alt="Gleam's welcome, step five: choose a Product team or a Founder's board as your first room." width="1475" height="975" loading="lazy"></div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="brains-title">
+      <div class="wrap">
+        <p class="kicker">Brains and voices</p>
+        <h2 id="brains-title">Use the services you already pay for</h2>
+        <p class="section-lead">Gleam ships with no keys and no subscription. You connect your own, and pay those services directly at their prices.</p>
+        <div class="table-scroll reveal">
+          <table class="brains">
+            <thead><tr><th>Service</th><th>What Gleam uses it for</th><th>You need</th></tr></thead>
+            <tbody>
+              <tr><td>Claude Code CLI</td><td>Gleam and experts thinking on your Claude plan (Sonnet, Opus, Haiku)</td><td>Claude Code installed and signed in</td></tr>
+              <tr><td>Anthropic API</td><td>Claude Fable 5.1, Opus 5, Sonnet 5, Haiku 4.5; the sharpest on-screen work with zoom and computer use</td><td>An Anthropic API key</td></tr>
+              <tr><td>Groq</td><td>Fastest speech-to-text (Whisper Large v3 Turbo) with live captions; fast expert brains (GPT-OSS, Llama)</td><td>A Groq API key (optional)</td></tr>
+              <tr><td>OpenAI</td><td>Experts on GPT-5 and GPT-5 mini; speech-to-text fallback</td><td>An OpenAI API key (optional)</td></tr>
+              <tr><td>NVIDIA NIM</td><td>Experts on Llama 3.3 70B</td><td>An NVIDIA API key (optional)</td></tr>
+              <tr><td>Fish Audio</td><td>A natural voice for Gleam and each expert</td><td>A Fish Audio API key (optional; you can type instead)</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section id="privacy" aria-labelledby="privacy-title">
+      <div class="wrap">
+        <div class="band reveal">
+          <p class="kicker">Privacy and safety</p>
+          <h2 id="privacy-title">Your computer, your keys, your data</h2>
+          <p class="section-lead">We run no servers and collect nothing. There is no account, no analytics and no tracking in the app or on this site.</p>
+          <div class="grid-2">
+            <div>
+              <h3>Keys sealed by Windows</h3>
+              <p style="color:var(--muted)">API keys are encrypted with Windows DPAPI so only your Windows user can read them. They never leave your computer except to go to the service they belong to.</p>
+            </div>
+            <div>
+              <h3>Straight to the services you choose</h3>
+              <p style="color:var(--muted)">When you ask something, your words, and a screenshot when Gleam needs to look, go directly from your computer to the provider you connected. Nothing passes through us.</p>
+            </div>
+            <div>
+              <h3>You approve risky actions</h3>
+              <p style="color:var(--muted)">Screen actions that send, post, delete, buy, install or deploy wait for your OK. Gleam only acts on requests you start, and logs every action on your computer.</p>
+            </div>
+            <div>
+              <h3>Listening only when you ask</h3>
+              <p style="color:var(--muted)">The microphone opens while you hold Right Ctrl or turn on Always-on. Audio is not kept. Teach by showing counts keystrokes but never records what you type.</p>
+            </div>
+          </div>
+          <p style="margin:28px 0 0"><a class="btn btn-sm" href="privacy.html">Read the full Privacy Policy</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="download" aria-labelledby="download-title">
+      <div class="wrap">
+        <p class="kicker">Download</p>
+        <h2 id="download-title">Get Gleam for Windows</h2>
+        <div class="install">
+          <div class="dl-card reveal">
+            <h3><img src="assets/icon.png" alt="" width="44" height="44">Gleam 0.1.0</h3>
+            <p class="dl-meta">Windows 10 and 11, 64-bit · 2.6 MB · installs per user</p>
+            <a class="btn btn-primary" href="https://github.com/brn-mwai/brn-mwai.github.io/releases/download/v0.1.0/Gleam_0.1.0_x64-setup.exe" data-download>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0l-4.5-4.5M12 15l4.5-4.5M5 19h14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Download the installer
+            </a>
+            <div class="hash"><span id="sha">SHA256 239842A1B144B3AD4D848F417C102F641255A3A9B0455852D09AC903F1CE3BD4</span><button type="button" data-copy="239842A1B144B3AD4D848F417C102F641255A3A9B0455852D09AC903F1CE3BD4">Copy</button></div>
+            <p style="margin:14px 0 0;color:var(--faint);font-size:13.5px">By downloading you agree to the <a href="terms.html">Terms of Use</a>.</p>
+          </div>
+          <div class="reveal">
+            <ul class="req">
+              <li><b>Windows SmartScreen.</b> Gleam is not code-signed yet, so Windows may warn once. Choose More info, then Run anyway.</li>
+              <li><b>A brain.</b> The Claude Code CLI signed in to your Claude plan, or an Anthropic API key. Groq, OpenAI, NVIDIA and Fish Audio are optional.</li>
+              <li><b>A microphone</b> to talk to Gleam. You can always type instead.</li>
+            </ul>
+            <p style="margin:18px 0 0;color:var(--muted);font-size:15px">Check the file arrived intact, in PowerShell in your Downloads folder:</p>
+            <pre>Get-FileHash .\Gleam_0.1.0_x64-setup.exe</pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" aria-labelledby="faq-title">
+      <div class="wrap">
+        <p class="kicker center">Questions</p>
+        <h2 id="faq-title" class="center">Frequently asked</h2>
+        <div class="faq">
+          <details><summary>Is Gleam free?</summary><p>Yes, Gleam itself is free to install and use. The AI and voice services it connects to are paid for by you, directly, under your own accounts: your Claude plan or API usage, and optionally Groq, OpenAI, NVIDIA and Fish Audio.</p></details>
+          <details><summary>Does Gleam send my data anywhere?</summary><p>Only to the services you connect, and only when you use a feature that needs them. We run no servers and receive nothing. Your rooms, notes, memory and settings stay in your Windows user folder. See the <a href="privacy.html">Privacy Policy</a>.</p></details>
+          <details><summary>Can Gleam do things on my computer without asking?</summary><p>Gleam only acts on requests you start. Anything that sends, posts, deletes, buys, installs or deploys waits for you to press Allow, and every action is written to a log you can read. Press Esc to stop Gleam at any time.</p></details>
+          <details><summary>Which brain should I use?</summary><p>If you have a Claude subscription, Claude Code on your plan is the simplest. An Anthropic API key unlocks Claude Fable 5.1 for the sharpest screen work. Add a Groq key for the fastest hearing and replies.</p></details>
+          <details><summary>Does it work on Mac or Linux?</summary><p>Not yet. Gleam controls the desktop through Windows, so it runs on Windows 10 and 11 for now.</p></details>
+          <details><summary>Why does Windows show a SmartScreen warning?</summary><p>Gleam is new and not yet code-signed, so Windows has not seen it before. Check the SHA256 above matches, then choose More info and Run anyway. Signing is next on the list.</p></details>
+          <details><summary>Is Gleam open source?</summary><p>No. Gleam is proprietary software by Brian Mwai. You are free to install and run it; the source code, name, mascot and logo are not licensed for reuse. See the <a href="terms.html">Terms of Use</a>.</p></details>
+          <details><summary>How do I uninstall it?</summary><p>Open Windows Settings, then Apps, find Gleam and choose Uninstall. To remove your rooms, keys and settings too, delete the Gleam folder in %APPDATA%.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="team-title">
+      <div class="wrap center">
+        <p class="kicker">The team</p>
+        <h2 id="team-title">Made in Nairobi</h2>
+        <p class="section-lead">Built overnight at the Claude Community Kenya Fable 5.1 Build Day, and still being built.</p>
+        <div class="team">
+          <div class="person reveal"><i>B</i><b>Brian Mwai</b><span>Founder, design and engineering</span></div>
+          <div class="person reveal"><i>P</i><b>Priscilla N.</b><span>Team</span></div>
+          <div class="person reveal"><i>H</i><b>Harris</b><span>Team</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="final">
+      <div class="wrap">
+        <img src="assets/mascot.svg" alt="" width="96" height="126">
+        <h2>Stop searching for the button.</h2>
+        <p class="section-lead" style="margin-inline:auto">Let Gleam point at it.</p>
+        <a class="btn btn-primary" href="#download">Download for Windows</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <div>
+        <img src="assets/logo.svg" alt="Gleam" width="77" height="24">
+        <p style="margin:0">© 2026 Brian Mwai. All rights reserved.</p>
+      </div>
+      <nav aria-label="Footer">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="license.html">Licence</a>
+        <a href="security.html">Security</a>
+        <a href="mailto:mwaibryn@gmail.com">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <script src="assets/site.js" defer></script>
+</body>
+</html>

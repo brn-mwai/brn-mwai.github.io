@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Security · Gleam</title>
+  <meta name="description" content="How Gleam protects your keys and your computer, and how to report a security problem privately.">
+  <meta name="theme-color" content="#0f1115">
+  <link rel="canonical" href="https://brn-mwai.github.io/gleam/security.html">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="top is-scrolled">
+    <div class="wrap top-in">
+      <a class="brand" href="./" aria-label="Gleam home"><img src="assets/logo.svg" alt="Gleam" width="90" height="28"></a>
+      <nav class="nav" aria-label="Main" style="display:flex"><a href="./">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav>
+    </div>
+  </header>
+
+  <main id="main" class="legal">
+    <div class="wrap">
+      <h1>Security</h1>
+      <p class="updated">Effective 21 September 2026 · Applies to the Gleam desktop app for Windows and to this website.</p>
+
+      <p class="note"><b>Found a problem?</b> Please email <a href="mailto:mwaibryn@gmail.com?subject=Gleam%20security">mwaibryn@gmail.com</a> with "Gleam security" in the subject. Tell us privately first and give us a fair chance to fix it before you share it with anyone else.</p>
+
+      <h2>1. How to report</h2>
+      <ul>
+        <li>Say which Gleam version you have (the installer file name includes it, for example 0.1.0) and which version of Windows.</li>
+        <li>Describe what you found, the steps to reproduce it, and what someone could do with it.</li>
+        <li>Do not include real API keys, your own or anyone else's. If a key may have leaked, revoke it with its provider first.</li>
+      </ul>
+      <p>We aim to reply within 5 working days and to tell you what we will do and when. We are glad to credit you when the fix ships, if you would like that. There is no paid bug bounty.</p>
+
+      <h2>2. What is in scope</h2>
+      <ul>
+        <li>The Gleam desktop app and its installer, as downloaded from this website.</li>
+        <li>This website, <code>brn-mwai.github.io/gleam</code>.</li>
+      </ul>
+      <p>Out of scope: the AI and voice services Gleam connects to (Anthropic, OpenAI, NVIDIA, Groq, Fish Audio), GitHub itself, and problems that need someone to already control your Windows account. Please report issues with those services to them directly.</p>
+      <p>Please test only on your own computer and your own accounts. Do not access other people's data, and do not run tests that degrade services for others.</p>
+
+      <h2>3. How Gleam is built to be safe</h2>
+      <ul>
+        <li><b>Your keys:</b> sealed with Windows DPAPI in <code>%APPDATA%\Gleam</code>, so only your Windows user account can unseal them. They are never written in plain text and never sent anywhere except to the service they belong to.</li>
+        <li><b>No listening service:</b> the app opens no network port and accepts no incoming connections. It only makes outgoing requests to the services you connect.</li>
+        <li><b>No accounts, no servers:</b> we run no backend, so there is no account of yours for anyone to break into and no database of users to leak.</li>
+        <li><b>You approve risky actions:</b> anything that sends, posts, deletes, buys, installs or deploys waits for you to press Allow, and every action Gleam takes on your computer is written to a journal you can read.</li>
+        <li><b>No automatic updates:</b> Gleam never downloads or installs code by itself. New versions come only from this website, when you choose to install them.</li>
+        <li><b>Installs per user:</b> the installer needs no administrator rights and writes only to your own user folders.</li>
+      </ul>
+
+      <h2>4. Check your download</h2>
+      <p>Download Gleam only from <a href="./#download">this website</a>. Each release lists the SHA256 checksum of its installer. To check yours, open PowerShell in your Downloads folder and run:</p>
+      <pre><code>Get-FileHash .\Gleam_0.1.0_x64-setup.exe -Algorithm SHA256</code></pre>
+      <p>The result must match the checksum on the download card exactly. If it does not, delete the file and tell us. The installer is not yet code-signed, so Windows SmartScreen may warn you the first time; the checksum is how you confirm the file is ours.</p>
+
+      <h2>5. This website</h2>
+      <p>This site is static HTML served by GitHub Pages over HTTPS. It sets no cookies, has no forms and loads no scripts, fonts or analytics from anyone else.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <div><img src="assets/logo.svg" alt="Gleam" width="77" height="24"><p style="margin:0">© 2026 Brian Mwai. All rights reserved.</p></div>
+      <nav aria-label="Footer"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="license.html">Licence</a><a href="security.html">Security</a><a href="mailto:mwaibryn@gmail.com">Contact</a></nav>
+    </div>
+  </footer>
+</body>
+</html>

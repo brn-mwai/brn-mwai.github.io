@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy · Gleam</title>
+  <meta name="description" content="How Gleam handles your data: it runs on your computer, uses your own keys, and sends nothing to us.">
+  <meta name="theme-color" content="#0f1115">
+  <link rel="canonical" href="https://brn-mwai.github.io/gleam/privacy.html">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="top is-scrolled">
+    <div class="wrap top-in">
+      <a class="brand" href="./" aria-label="Gleam home"><img src="assets/logo.svg" alt="Gleam" width="90" height="28"></a>
+      <nav class="nav" aria-label="Main" style="display:flex"><a href="./">Home</a><a href="terms.html">Terms</a><a href="security.html">Security</a></nav>
+    </div>
+  </header>
+
+  <main id="main" class="legal">
+    <div class="wrap">
+      <h1>Privacy Policy</h1>
+      <p class="updated">Effective 21 September 2026 · Applies to the Gleam desktop app for Windows and to this website.</p>
+
+      <p class="note"><b>In short:</b> Gleam runs on your computer. We run no servers, have no accounts, and collect no data about you, in the app or on this site. When you use a feature that needs an AI or voice service, your request goes directly from your computer to the service you connected, under your own account with them.</p>
+
+      <h2>1. Who we are</h2>
+      <p>Gleam is made by Brian Mwai in Nairobi, Kenya ("we", "us"). You can reach us at <a href="mailto:mwaibryn@gmail.com">mwaibryn@gmail.com</a>.</p>
+
+      <h2>2. What we collect</h2>
+      <p>Nothing. Gleam has no sign-up and no account. The app contains no analytics, crash reporting, advertising or tracking code, and does not send usage data to us. This website sets no cookies and loads no analytics, fonts or scripts from anyone else.</p>
+
+      <h2>3. What stays on your computer</h2>
+      <p>Gleam keeps its data in your Windows user folder, at <code>%APPDATA%\Gleam</code>:</p>
+      <ul>
+        <li><b>Your rooms:</b> experts, groups, messages, canvas notes, and what each expert remembers and knows (their memory and knowledge graph).</li>
+        <li><b>Your profile:</b> the name, picture and short description you give Gleam. Your name and description are shared with your experts' brains so they know who they are talking to; your picture is not.</li>
+        <li><b>Your API keys:</b> sealed with Windows DPAPI, so only your Windows user account can unseal them.</li>
+        <li><b>A journal of actions:</b> a log of what Gleam did on your computer (for example "opened notepad", "clicked at 400, 220"), so you can check it.</li>
+        <li><b>Routines, microphone choice and voice clips</b> Gleam has made for instant replies.</li>
+      </ul>
+      <p>You can read, change or delete any of it. Uninstalling Gleam and deleting that folder removes everything.</p>
+
+      <h2>4. What goes to the services you connect</h2>
+      <p>Gleam works with AI and voice services that you choose and connect with your own keys or sign-in. When you use a feature that needs one, Gleam sends what that feature needs directly from your computer to that service. We never see it.</p>
+      <ul>
+        <li><b>Anthropic</b> (Claude API, or Claude Code on your plan): what you ask, the room's recent conversation, your experts' personas, memory, skills and relevant knowledge, and a screenshot of your screen when Gleam needs to look at it or act on it.</li>
+        <li><b>OpenAI, NVIDIA, Groq</b>: the same kinds of content, for experts you set to think with those services.</li>
+        <li><b>Groq, OpenAI, NVIDIA or Fish Audio</b> for speech-to-text: the audio of what you say while the microphone is open.</li>
+        <li><b>Fish Audio</b> for text-to-speech: the words Gleam and your experts speak.</li>
+      </ul>
+      <p>Each service handles that data under its own terms and privacy policy, which you agreed to when you created your account with them: <a href="https://www.anthropic.com/legal/privacy" rel="noopener">Anthropic</a>, <a href="https://openai.com/policies/privacy-policy" rel="noopener">OpenAI</a>, <a href="https://www.nvidia.com/en-us/about-nvidia/privacy-policy/" rel="noopener">NVIDIA</a>, <a href="https://groq.com/privacy-policy/" rel="noopener">Groq</a>, <a href="https://fish.audio/privacy" rel="noopener">Fish Audio</a>. Please read them, because you pay those services directly and they decide how long they keep your requests.</p>
+
+      <h3>Optional features that reach other services</h3>
+      <ul>
+        <li><b>Casting a character</b> looks up shows and characters on TVMaze and the Rick and Morty API, and generated avatars on DiceBear, only when you search.</li>
+        <li><b>Pictures and GIFs</b> an expert brings into a chat are downloaded from the link it gives, for example Giphy.</li>
+        <li><b>Adding a skill from a link</b> downloads that file, for example from GitHub.</li>
+        <li><b>Links and websites</b> Gleam opens on your screen are opened in your own browser, like any link you click.</li>
+      </ul>
+
+      <h2>5. Your screen, microphone and keyboard</h2>
+      <ul>
+        <li><b>Screen:</b> Gleam takes a screenshot only for a request you started, to see what is there, and sends it to your brain service. It is not saved to disk, except when an expert shows a screenshot in a chat message, where it is kept with that message in your rooms. Gleam's own pointers are hidden from these screenshots.</li>
+        <li><b>Microphone:</b> it opens only while you hold Right Ctrl, or while you have turned on Always-on in a room. Audio is sent to your speech-to-text service and not kept. If you use a speech model on your own computer, the temporary audio file is deleted straight after.</li>
+        <li><b>Keyboard and mouse:</b> Gleam acts only on requests you start. Anything that sends, posts, deletes, buys, installs or deploys waits for you to press Allow. Teach by showing watches clicks and the names of shortcut keys; it counts typed characters but never records which ones.</li>
+      </ul>
+
+      <h2>6. This website</h2>
+      <p>This site is hosted on GitHub Pages. GitHub may record technical information such as IP addresses when you visit, under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHub Privacy Statement</a>. We do not receive those records. Downloads of the installer are served by GitHub in the same way.</p>
+
+      <h2>7. Children</h2>
+      <p>Gleam is not meant for children under 13, and the AI services it connects to set their own minimum ages.</p>
+
+      <h2>8. Your rights</h2>
+      <p>Because we hold no personal data about you, there is nothing for us to access, correct or delete on our side. Your data is on your computer, under your control. For data held by the services you connect, contact them directly. If you are in Kenya, you have rights under the Data Protection Act, 2019, and you can contact the Office of the Data Protection Commissioner; wherever you are, you can contact us with any question.</p>
+
+      <h2>9. Security</h2>
+      <p>Keys are sealed with Windows DPAPI and never written in plain text. The app has no network service listening for connections. If you find a security problem, please tell us privately; see <a href="security.html">Security</a>.</p>
+
+      <h2>10. Changes</h2>
+      <p>If this policy changes, we will update it on this page and change the effective date above. If a change affects what leaves your computer, we will also say so in the app's release notes.</p>
+
+      <h2>11. Contact</h2>
+      <p><a href="mailto:mwaibryn@gmail.com">mwaibryn@gmail.com</a> · Brian Mwai, Nairobi, Kenya</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap foot">
+      <div><img src="assets/logo.svg" alt="Gleam" width="77" height="24"><p style="margin:0">© 2026 Brian Mwai. All rights reserved.</p></div>
+      <nav aria-label="Footer"><a href="privacy.html">Privacy Policy</a><a href="terms.html">Terms of Use</a><a href="license.html">Licence</a><a href="security.html">Security</a><a href="mailto:mwaibryn@gmail.com">Contact</a></nav>
+    </div>
+  </footer>
+</body>
+</html>
