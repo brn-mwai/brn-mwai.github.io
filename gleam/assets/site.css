@@ -16,7 +16,6 @@
   --gold-2: #ecc964;
   --radius: 14px;
   --radius-lg: 22px;
-  --shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
   --font: "Segoe UI Variable Text", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
   --display: "Segoe UI Variable Display", "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
   --mono: "Cascadia Code", "Consolas", ui-monospace, monospace;
@@ -28,6 +27,7 @@
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 var(--font); -webkit-font-smoothing: antialiased; }
 img, video, svg { display: block; max-width: 100%; }
+img { height: auto; }
 a { color: var(--mint); text-decoration: none; }
 a:hover { text-decoration: underline; text-underline-offset: 3px; }
 :focus-visible { outline: 2px solid var(--mint); outline-offset: 3px; border-radius: 6px; }
@@ -48,14 +48,13 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
 /* Buttons */
 .btn { display: inline-flex; align-items: center; gap: 10px; padding: 12px 20px; border-radius: 12px; border: 1px solid var(--line-2); background: var(--panel); color: var(--text); font: 600 15px/1 var(--font); cursor: pointer; transition: transform 140ms, background 140ms, border-color 140ms; }
 .btn:hover { text-decoration: none; transform: translateY(-1px); border-color: #4a5160; }
-.btn-primary { background: var(--mint); border-color: var(--mint); color: var(--ink); box-shadow: 0 10px 30px rgba(94, 240, 160, 0.25); }
+.btn-primary { background: var(--mint); border-color: var(--mint); color: var(--ink); }
 .btn-primary:hover { background: #7cf5b4; border-color: #7cf5b4; }
 .btn-sm { padding: 9px 14px; font-size: 14px; border-radius: 10px; }
 .btn svg { width: 18px; height: 18px; flex: none; }
 
 /* Hero */
 .hero { position: relative; padding: 70px 0 40px; overflow: hidden; }
-.hero::before { content: ""; position: absolute; inset: -30% -10% auto; height: 700px; background: radial-gradient(50% 50% at 50% 30%, rgba(94, 240, 160, 0.16), transparent 70%); pointer-events: none; }
 .hero-grid { position: relative; display: grid; grid-template-columns: 1.05fr 1fr; gap: 56px; align-items: center; }
 .award-pill { display: inline-flex; align-items: center; gap: 10px; padding: 7px 14px 7px 8px; border-radius: 999px; border: 1px solid rgba(236, 201, 100, 0.35); background: linear-gradient(90deg, rgba(192, 141, 24, 0.22), rgba(236, 201, 100, 0.08)); color: #f3dc98; font-size: 13.5px; font-weight: 600; }
 .award-pill:hover { text-decoration: none; border-color: rgba(236, 201, 100, 0.7); }
@@ -66,11 +65,11 @@ h1 em { font-style: normal; color: var(--mint); }
 .cta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
 .fineprint { margin: 16px 0 0; color: var(--faint); font-size: 13.5px; }
 .hero-shot { position: relative; }
-.window { border-radius: var(--radius-lg); border: 1px solid var(--line-2); background: var(--panel); box-shadow: var(--shadow); overflow: hidden; }
+.window { border-radius: var(--radius-lg); border: 1px solid var(--line-2); background: var(--panel); overflow: hidden; }
 .window-bar { display: flex; align-items: center; gap: 7px; height: 34px; padding: 0 14px; background: #171a20; border-bottom: 1px solid var(--line); }
 .window-bar i { width: 11px; height: 11px; border-radius: 50%; background: #3a404c; }
 .window-bar span { margin-left: 8px; color: var(--faint); font-size: 12.5px; }
-.hero-mascot { position: absolute; left: -38px; bottom: -34px; width: 118px; filter: drop-shadow(0 16px 30px rgba(0, 0, 0, 0.5)); animation: bob 5s ease-in-out infinite; }
+.hero-mascot { position: absolute; left: -38px; bottom: -34px; width: 118px; animation: bob 5s ease-in-out infinite; }
 @keyframes bob { 50% { transform: translateY(-8px) rotate(-2deg); } }
 
 /* Sections */
@@ -84,7 +83,7 @@ h3 { margin: 0 0 8px; font: 650 19px/1.3 var(--display); letter-spacing: -0.01em
 
 /* Award */
 .award { padding: 30px 0 70px; }
-.award-card { display: grid; grid-template-columns: 1fr 1.25fr; border-radius: 26px; overflow: hidden; border: 1px solid rgba(236, 201, 100, 0.3); background: #15130d; box-shadow: var(--shadow); }
+.award-card { display: grid; grid-template-columns: 1fr 1.25fr; border-radius: 26px; overflow: hidden; border: 1px solid rgba(236, 201, 100, 0.3); background: #15130d; }
 .award-gold { position: relative; display: grid; place-content: center; gap: 6px; padding: 44px 32px; text-align: center; color: #1b1606; background: linear-gradient(160deg, var(--gold-1), var(--gold-2)); }
 .award-gold .trophy { width: 58px; height: 58px; margin: 0 auto 6px; }
 .award-gold b { font: 600 clamp(44px, 5vw, 64px)/1 Georgia, "Times New Roman", serif; letter-spacing: -0.02em; }
@@ -105,7 +104,7 @@ h3 { margin: 0 0 8px; font: 650 19px/1.3 var(--display); letter-spacing: -0.01em
 .award-links .btn { border-color: rgba(236, 201, 100, 0.35); background: rgba(236, 201, 100, 0.08); color: #f3dc98; }
 
 /* Video */
-.video-frame { position: relative; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--line-2); background: #000; box-shadow: var(--shadow); aspect-ratio: 16 / 9; }
+.video-frame { position: relative; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--line-2); background: #000; aspect-ratio: 16 / 9; }
 .video-frame video { width: 100%; height: 100%; object-fit: cover; }
 
 /* Features */
@@ -145,12 +144,12 @@ kbd { display: inline-block; padding: 1px 7px; border: 1px solid var(--line-2); 
 .table-scroll { overflow-x: auto; }
 
 /* Privacy band */
-.band { border-radius: 26px; padding: 44px; border: 1px solid var(--line); background: radial-gradient(80% 120% at 0% 0%, rgba(94, 240, 160, 0.1), transparent 60%), var(--panel); }
+.band { border-radius: 26px; padding: 44px; border: 1px solid var(--line); background: var(--panel); }
 .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px 40px; }
 
 /* Install */
 .install { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; align-items: start; }
-.dl-card { padding: 30px; border-radius: 22px; border: 1px solid var(--line-2); background: linear-gradient(180deg, var(--panel-2), var(--panel)); box-shadow: var(--shadow); }
+.dl-card { padding: 30px; border-radius: 22px; border: 1px solid var(--line-2); background: linear-gradient(180deg, var(--panel-2), var(--panel)); }
 .dl-card h3 { display: flex; align-items: center; gap: 12px; font-size: 22px; }
 .dl-card h3 img { width: 44px; height: 44px; border-radius: 10px; }
 .dl-meta { margin: 6px 0 20px; color: var(--muted); font-size: 14.5px; }
