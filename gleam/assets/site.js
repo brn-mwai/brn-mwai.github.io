@@ -17,21 +17,38 @@
     }),
   );
 
-  const still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const reveals = document.querySelectorAll(".reveal");
-  if (still || !("IntersectionObserver" in window)) {
-    reveals.forEach((element) => element.classList.add("is-in"));
+  const motion = window.Motion;
+  const root = document.documentElement;
+  if (motion && root.classList.contains("m")) {
+    window.__gleamMotion = true;
+    const { animate, inView, press, stagger } = motion;
+    const settle = { type: "spring", visualDuration: 0.6, bounce: 0 };
+    const quick = { type: "spring", visualDuration: 0.25, bounce: 0 };
+
+    const intro = [...document.querySelectorAll(".hero-grid > div:first-child > *")];
+    animate(intro, { opacity: [0, 1], y: [20, 0] }, { ...settle, delay: stagger(0.08, { startDelay: 0.1 }) });
+    animate(".hero-shot", { opacity: [0, 1], y: [28, 0], scale: [0.98, 1] }, { ...settle, visualDuration: 0.8, delay: 0.3 });
+    animate(".hero-mascot", { opacity: [0, 1], y: [18, 0], rotate: [-8, 0] }, { ...settle, delay: 0.75 });
+
+    const reveals = [...document.querySelectorAll(".reveal")].filter((element) => !element.closest(".hero"));
+    reveals.forEach((element) => {
+      const siblings = [...element.parentElement.children].filter((child) => child.classList.contains("reveal"));
+      const place = siblings.indexOf(element) % 3;
+      inView(element, () => {
+        animate(element, { opacity: [0, 1], y: [24, 0] }, { ...settle, delay: place * 0.07 });
+      }, { margin: "0px 0px -8% 0px", amount: 0.1 });
+    });
+
+    inView(".award-card", () => {
+      animate(".bar i", { scaleX: [0, 1] }, { type: "spring", visualDuration: 0.9, bounce: 0, delay: stagger(0.1, { startDelay: 0.25 }) });
+    }, { amount: 0.3 });
+
+    press(".btn, .award-pill, .hash button", (element) => {
+      animate(element, { scale: 0.96 }, quick);
+      return () => animate(element, { scale: 1 }, quick);
+    });
   } else {
-    const seen = new IntersectionObserver(
-      (entries) =>
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          entry.target.classList.add("is-in");
-          seen.unobserve(entry.target);
-        }),
-      { rootMargin: "0px 0px -8% 0px", threshold: 0.08 },
-    );
-    reveals.forEach((element) => seen.observe(element));
+    root.classList.remove("m");
   }
 
   document.querySelectorAll("[data-copy]").forEach((button) =>
