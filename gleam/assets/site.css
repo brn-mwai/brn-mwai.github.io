@@ -85,7 +85,7 @@ h3 { margin: 0 0 8px; font: 500 19px/1.3 var(--display); letter-spacing: -0.01em
 .award { padding: 30px 0 70px; }
 .award-card { display: grid; grid-template-columns: 1fr 1.25fr; border-radius: 26px; overflow: hidden; border: 1px solid rgba(236, 201, 100, 0.3); background: #15130d; }
 .award-gold { position: relative; display: grid; place-content: center; gap: 6px; padding: 44px 32px; text-align: center; color: #1b1606; background: var(--gold-2); }
-.award-gold .trophy { width: 58px; height: 58px; margin: 0 auto 6px; }
+.award-mascot { width: 190px; height: auto; margin: -8px auto 4px; }
 .award-gold b { font: 500 clamp(44px, 5vw, 64px)/1 Georgia, "Times New Roman", serif; letter-spacing: -0.02em; }
 .award-gold strong { font-size: 15px; letter-spacing: 0.28em; }
 .award-gold span { font-size: 14px; font-weight: 500; }
@@ -177,7 +177,7 @@ pre { margin: 12px 0 0; padding: 14px 16px; overflow-x: auto; border-radius: 10p
 
 /* Final CTA */
 .final { padding: 100px 0; text-align: center; }
-.final img { width: 96px; margin: 0 auto 18px; }
+.final .final-mascot { width: 170px; height: auto; margin: 0 auto 18px; }
 
 /* Footer */
 footer { padding: 44px 0 56px; border-top: 1px solid var(--line); color: var(--faint); font-size: 14px; }
@@ -198,7 +198,7 @@ footer { padding: 44px 0 56px; border-top: 1px solid var(--line); color: var(--f
 .updated { color: var(--faint); font-size: 14px; }
 .note { padding: 16px 18px; border-radius: 12px; border: 1px solid var(--line); background: var(--panel); color: var(--muted); }
 
-.m .reveal, .m .hero-grid > div:first-child > *, .m .hero-mascot { opacity: 0; }
+.m .reveal, .m .hero-grid > div:first-child > *, .m .hero-mascot, .m .award-mascot, .m .section-mascot, .m .faq-mascot, .m .final-mascot, .m .person img { opacity: 0; }
 .m .bar i { transform: scaleX(0); transform-origin: left center; }
 
 /* Responsive */
@@ -229,3 +229,9 @@ b, strong, th, summary, dt { font-weight: 500; }
 .gc-pose { position: absolute; left: -45.13px; top: -17.89px; width: 46px; transform-origin: 45.13px 17.89px; }
 .gc-pose svg { display: block; width: 46px; height: auto; overflow: visible; }
 .gc-eye { transform-box: fill-box; transform-origin: 50% 50%; }
+
+.head-with-mascot { display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; }
+.section-mascot { flex: none; width: 150px; height: auto; margin-bottom: 14px; }
+.faq-mascot { display: block; width: 96px; height: auto; margin: 0 auto 10px; }
+.person img { display: block; width: 76px; height: auto; margin: 0 auto 12px; }
+@media (max-width: 640px) { .section-mascot { width: 104px; } }

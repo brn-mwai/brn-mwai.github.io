@@ -39,6 +39,12 @@
       }, { margin: "0px 0px -8% 0px", amount: 0.1 });
     });
 
+    document.querySelectorAll(".award-mascot, .section-mascot, .faq-mascot, .final-mascot, .person img").forEach((mascot, index) => {
+      inView(mascot, () => {
+        animate(mascot, { opacity: [0, 1], y: [18, 0], rotate: [-8, 0], scale: [0.9, 1] }, { ...settle, delay: 0.15 + (index % 3) * 0.08 });
+      }, { amount: 0.4 });
+    });
+
     inView(".award-card", () => {
       animate(".bar i", { scaleX: [0, 1] }, { type: "spring", visualDuration: 0.9, bounce: 0, delay: stagger(0.1, { startDelay: 0.25 }) });
     }, { amount: 0.3 });
