@@ -235,3 +235,27 @@ b, strong, th, summary, dt { font-weight: 500; }
 .faq-mascot { display: block; width: 96px; height: auto; margin: 0 auto 10px; }
 .person img { display: block; width: 76px; height: auto; margin: 0 auto 12px; }
 @media (max-width: 640px) { .section-mascot { width: 104px; } }
+
+.crew { max-width: 1000px; margin: 40px auto 0; }
+.crew-photo { position: relative; overflow: hidden; border-radius: var(--radius-lg); border: 1px solid var(--line); background: var(--panel); }
+.crew-photo img { width: 100%; }
+.tag { position: absolute; left: var(--x); top: var(--y); transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; padding: 6px 11px 7px; border-radius: 10px; background: var(--ink); border: 1px solid var(--mint); color: var(--text); line-height: 1.2; white-space: nowrap; box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45); }
+.tag::before { content: ""; position: absolute; left: 50%; top: -6px; width: 10px; height: 10px; background: var(--ink); border-left: 1px solid var(--mint); border-top: 1px solid var(--mint); transform: translateX(-50%) rotate(45deg); }
+.tag b { font-size: 13.5px; }
+.tag small { color: var(--mint); font-size: 11px; letter-spacing: 0.02em; }
+.tag i { display: none; font-style: normal; }
+.tag-amb, .tag-amb::before { border-color: var(--gold-2); }
+.tag-amb small { color: var(--gold-2); }
+.crew figcaption { margin-top: 16px; color: var(--faint); font-size: 14px; }
+.crew figcaption p { margin: 10px 0 0; }
+.crew-legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 22px; margin: 0; padding: 0; list-style: none; counter-reset: crew; }
+.crew-legend li { counter-increment: crew; }
+.crew-legend li::before { content: counter(crew); display: inline-grid; place-items: center; width: 18px; height: 18px; margin-right: 7px; border-radius: 50%; background: var(--mint-soft); color: var(--mint); font-size: 11px; vertical-align: 1px; }
+.crew-legend li:first-child::before, .crew-legend li:last-child::before { background: var(--gold-soft); color: var(--gold-2); }
+.crew-legend b { color: var(--text); margin-right: 4px; }
+@media (max-width: 720px) {
+  .tag { padding: 0; width: 22px; height: 22px; border-radius: 50%; justify-content: center; }
+  .tag::before, .tag b, .tag small { display: none; }
+  .tag i { display: block; font-size: 11.5px; }
+  .tag-amb i { color: var(--gold-2); }
+}
