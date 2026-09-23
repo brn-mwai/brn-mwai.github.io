@@ -28,7 +28,7 @@
     const intro = [...document.querySelectorAll(".hero-copy > *")];
     animate(intro, { opacity: [0, 1], y: [20, 0] }, { ...settle, delay: stagger(0.08, { startDelay: 0.1 }) });
     animate(".hero-shot", { opacity: [0, 1], y: [28, 0], scale: [0.98, 1] }, { ...settle, visualDuration: 0.8, delay: 0.3 });
-    animate(".hero-pointer", { opacity: [0, 1], x: [-24, 0], y: [18, 0] }, { ...settle, delay: 0.9 });
+    animate(".hero-mascot", { opacity: [0, 1], y: [18, 0], rotate: [-8, 0] }, { ...settle, delay: 0.75 });
 
     const reveals = [...document.querySelectorAll(".reveal")].filter((element) => !element.closest(".hero"));
     reveals.forEach((element) => {
